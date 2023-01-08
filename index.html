@@ -1,12 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;800&display=swap" rel="stylesheet">
     <title>Encriptador de texto</title>
 </head>
 <body>
-    
+    <div class="caja_body">
+        <header>
+            <div class="caja_header">
+                <img id="logo_alura" src="Imágenes/Vector_a.png" alt="Logo de alura">
+            </div>
+        </header>
+        <main>
+            <div class="caja_main">
+               <div class="caja_agregar">
+                    <textarea name="texto_ingresado" id="texto_ingresado" placeholder="Ingrese el texto aqui" ></textarea>
+                    <div class="caja_botones">
+                        <div class="caja_parrafo">
+                            <img class="edit_exclamacion" src="Imágenes/Vector_exclamacion.png" alt="Signo exclamacion">
+                            <p class="parrafo_botones">Solo letras minúsculas y sin acentos</p>
+                        </div>
+                        <div class="espacio_botones">
+                            <button class="botones" id="encriptar">Encriptar</button>
+                            <button class="botones" id="desencriptar">Desencriptar</button>
+                        </div>
+               </div>
+               </div>
+                <div class="caja_mostrar">
+                    <img class="edit_img" src="Imágenes/Muñeco.png" alt="Muñeco">
+                    <h2 class="edit">Ningún mensaje fue encontrado</h2>
+                    <p class="edit">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+            </div>
+        </main>
+    </div>
 </body>
 </html>

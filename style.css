@@ -1,0 +1,241 @@
+body{
+    width: 1440px;
+    height: 1024px;
+    background-color: #F3F5FC;
+}
+.caja_body{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background-color: #F3F5FC;
+}
+.caja_header{
+    width: 120px;
+    height: 48px;
+    /*margin: top right bottom left;*/
+    margin: 40px 0 0 40px;
+    float: left;
+}
+#logo_alura{
+    position: absolute;
+    margin: 0 44.91px 0 44px;
+}
+.caja_main{
+    width: 1160px;
+    height: 944px;
+    margin: 40px 40px 40px 240px;
+    position: relative;
+}
+.caja_agregar{
+    float: left;
+    width: 680px;
+    height: 784px;
+    margin-top: 160px;
+}
+textarea::placeholder{
+    font-family: 'Inter', sans-serif;
+    color: #0A3871;
+    font-weight: 400;
+    font-size: 32px;
+}
+#texto_ingresado{
+    width: 577px;
+    height: 48px;
+    border: none;
+    position: absolute;
+    background-color: #F3F5FC;
+    font-family: 'Inter', sans-serif;
+    color: #0A3871;
+    font-weight: 400;
+    font-size: 32px;
+}
+.caja_botones{
+    width: 680px;
+    height: 101px;
+    margin-top: 630px;
+    position: absolute;
+}
+.caja_parrafo{
+    width: 229px;
+    height: 18px;
+}
+.edit_exclamacion{
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin: 1px 0 1px 0;
+}
+.parrafo_botones{
+    width: 205px;
+    height: 18px;
+    position: absolute;
+    font-family: 'Inter', sans-serif;
+    color: #0A3871;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 3px 0 3px 24px;
+}
+.espacio_botones{
+    width: 100%;
+    float: inherit;
+    margin-top: 16px;
+}
+.botones{
+    width: 328px;
+    height: 67px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    border: 1px;
+    border-radius: 24px;
+}
+#encriptar{
+    background-color: #0A3871;
+    color: #FFFFFF;
+    float: left;
+}
+#desencriptar{
+    background-color: #D8DFE8;
+    color: #0A3871;
+    float: right;
+}
+.caja_mostrar{
+    float: right;
+    position: relative;
+    background-color: #FFFFFF;
+    width: 400px;
+    height: 944px;
+    box-shadow: 0px 24px 32px rgba(0,0,0,0.08);
+    border-radius: 32px;
+
+}
+.caja_mostrar h2{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    /*padding-top: 579px;*/
+}
+.caja_mostrar p{
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding-top: 16px;
+    padding-bottom: 243px;
+}
+.edit_img{
+    padding: 243px 32px 0px 32px;
+}
+.edit{
+    text-align: center;
+    padding: 0 32px;
+}
+
+
+@media screen and (max-width:769px){
+    body{
+        width: auto;
+        height: 1174px;
+    }
+    .caja_header{
+        width: auto;
+        height: auto;
+        /*margin: top right bottom left;*/
+        margin: 0 0 0 0;
+    }
+    #logo_alura{
+        width: 31.09px;
+        height: 46.37px;
+        margin: 73.42px 0 0 40px;
+    }
+    .caja_main{
+        width: 688px;
+        height: 894px;
+        margin: 240px 40px 40px 40px;
+    }
+    .caja_agregar{
+        float: none;
+        width: 688px;
+        height: 697px;
+        margin-top: 0;
+    }
+    #texto_ingresado{
+        width: 688px;
+    }
+    .caja_botones{
+        width: 688px;
+        margin-top: 596px;
+    }
+    .botones{
+        width: 332px;
+    }
+    #desencriptar{
+        position: absolute;
+        margin-left: 24px;
+    }
+    .caja_mostrar{
+        float: none;
+        position: absolute;
+        width: 688px;
+        height: 133px;
+        margin-top: 64px;
+    }
+    .caja_mostrar h2{
+        padding-top: 32px;
+    }
+    .caja_mostrar p{
+        padding-bottom: 32px;
+    }
+    .edit_img{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:376px){
+    body{
+        width: auto;
+        height: 933px;
+    }
+    #logo_alura{
+        width: 32px;
+        height: 48px;
+        margin: 24px 0 0 16px;
+    }
+    .caja_main{
+        width: 344px;
+        height: 741px;
+        margin: 152px 16px 40px 16px;
+    }
+    .caja_agregar{
+        width: 343.5px;
+        height: 491px;
+        margin-top: 0;
+    }
+    #texto_ingresado{
+        width: 338px;
+    }
+    .caja_botones{
+        width: 343px;
+        height: 192px;
+        margin-top: 300px;
+    }
+    .botones{
+        width: 343px;
+    }
+    #encriptar{
+        float: none;
+        display: block;
+        margin-bottom: 23.5px;
+    }
+    #desencriptar{
+        float: none;
+        display: block;
+        margin-left: 0;
+    }
+    .caja_mostrar{
+        float: none;
+        position: absolute;
+        background-color: #FFFFFF;
+        width: 327px;
+        height: 166px;
+        margin: 82px 8px 0 8px;
+    }
+}
