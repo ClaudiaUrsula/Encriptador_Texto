@@ -17,8 +17,13 @@ body{
     float: left;
 }
 #logo_alura{
+    float: inherit;
     position: absolute;
     margin: 0 44.91px 0 44px;
+    transition: 1s;
+}
+#logo_alura:hover{
+    transform: rotate(360deg);
 }
 .caja_main{
     width: 1160px;
@@ -39,8 +44,8 @@ textarea::placeholder{
     font-size: 32px;
 }
 #texto_ingresado{
-    width: 577px;
-    height: 48px;
+    width: 57%;
+    height: 60%;
     border: none;
     position: absolute;
     background-color: #F3F5FC;
@@ -48,6 +53,9 @@ textarea::placeholder{
     color: #0A3871;
     font-weight: 400;
     font-size: 32px;
+    white-space: pre-wrap;
+    resize: none;
+    outline: none;
 }
 .caja_botones{
     width: 680px;
@@ -87,26 +95,39 @@ textarea::placeholder{
     font-weight: 400;
     border: 1px;
     border-radius: 24px;
+    transition: transform 0.8s, background-color 100ms;
+}
+.botones:hover{
+    transform: scale(1.03);
+    font-weight: bolder;
 }
 #encriptar{
     background-color: #0A3871;
     color: #FFFFFF;
     float: left;
 }
+#encriptar:active{
+    background-color: orange;
+    font-weight: bolder;
+}
 #desencriptar{
     background-color: #D8DFE8;
     color: #0A3871;
     float: right;
 }
-.caja_mostrar{
+#desencriptar:active{
+    background-color: orange;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+.caja_texto{
     float: right;
     position: relative;
     background-color: #FFFFFF;
     width: 400px;
-    height: 944px;
+    height: 912px;
     box-shadow: 0px 24px 32px rgba(0,0,0,0.08);
     border-radius: 32px;
-
 }
 .caja_mostrar h2{
     font-family: 'Inter', sans-serif;
@@ -127,7 +148,36 @@ textarea::placeholder{
     text-align: center;
     padding: 0 32px;
 }
-
+#invisible_textarea{
+    width: 336px;
+    height: 749px;
+    border: none;
+    display: none;
+    background-color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    color: black;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 32px 32px 0 32px;
+    white-space: pre-wrap;
+    resize: none;
+    outline: none;
+}
+#copy{
+    color: darkblue;
+    display: none;
+    position: absolute;
+    margin: 32px;
+}
+#copy:hover{
+    transform: scale(1.03);
+    font-weight: bolder;
+}
+#copy:active{
+    background-color: orange;
+    color: #FFFFFF;
+    font-weight: bold;
+}
 
 @media screen and (max-width:769px){
     body{
@@ -170,23 +220,29 @@ textarea::placeholder{
         position: absolute;
         margin-left: 24px;
     }
-    .caja_mostrar{
+    .caja_texto{
         float: none;
         position: absolute;
-        width: 688px;
-        height: 133px;
+        width: 100%;
+        height: auto;
         margin-top: 64px;
     }
-    .caja_mostrar h2{
+    .caja_texto h2{
         padding-top: 32px;
     }
-    .caja_mostrar p{
+    .caja_texto p{
         padding-bottom: 32px;
     }
     .edit_img{
         display: none;
     }
-
+    #invisible_textarea{
+        width: 624px;
+    }
+    #copy{
+        position: relative;
+        width: 90%;
+    }
 }
 
 @media screen and (max-width:376px){
@@ -206,11 +262,12 @@ textarea::placeholder{
     }
     .caja_agregar{
         width: 343.5px;
-        height: 491px;
+        height: 75%;
         margin-top: 0;
     }
     #texto_ingresado{
         width: 338px;
+        height: 280px;
     }
     .caja_botones{
         width: 343px;
@@ -230,12 +287,21 @@ textarea::placeholder{
         display: block;
         margin-left: 0;
     }
-    .caja_mostrar{
-        float: none;
+    .caja_texto{
+        width: 100%;
+        height: auto;
         position: absolute;
         background-color: #FFFFFF;
-        width: 327px;
-        height: 166px;
-        margin: 82px 8px 0 8px;
+        margin: 0;
+    }
+    #invisible_textarea{
+        width: 308px;
+        height: 300px;
+        margin: 16px;
+    }
+    #copy{
+        position: relative;
+        width: 90%;
+        margin: 16px;
     }
 }

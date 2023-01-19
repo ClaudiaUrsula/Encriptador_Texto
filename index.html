@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script.js"></script>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;800&display=swap" rel="stylesheet">
@@ -18,24 +19,31 @@
         <main>
             <div class="caja_main">
                <div class="caja_agregar">
-                    <textarea name="texto_ingresado" id="texto_ingresado" placeholder="Ingrese el texto aqui" ></textarea>
+                    <textarea id="texto_ingresado" placeholder="Ingrese el texto aqui" ></textarea>
                     <div class="caja_botones">
                         <div class="caja_parrafo">
                             <img class="edit_exclamacion" src="Imágenes/Vector_exclamacion.png" alt="Signo exclamacion">
                             <p class="parrafo_botones">Solo letras minúsculas y sin acentos</p>
                         </div>
                         <div class="espacio_botones">
-                            <button class="botones" id="encriptar">Encriptar</button>
-                            <button class="botones" id="desencriptar">Desencriptar</button>
+                            <input type="button" id="encriptar" class="botones" value="Encriptar" 
+                            onclick="encriptar()">
+                            <input type="button" id="desencriptar" class="botones" value="Desencriptar" onclick="desencriptar()">
                         </div>
                </div>
                </div>
-                <div class="caja_mostrar">
-                    <img class="edit_img" src="Imágenes/Muñeco.png" alt="Muñeco">
-                    <h2 class="edit">Ningún mensaje fue encontrado</h2>
-                    <p class="edit">Ingresa el texto que desees encriptar o desencriptar</p>
+                <div class="caja_texto">
+                    <div class="caja_mostrar">
+                        <img class="edit_img" src="Imágenes/Muñeco.png" alt="Muñeco" id="chica_lupa">
+                        <h2 class="edit" id="h2_chica_lupa">Ningún mensaje fue encontrado</h2>
+                        <p class="edit" id="p_chica_lupa">Ingresa el texto que desees encriptar o desencriptar</p>
+                    </div>
+                    <div class="caja_no_mostrar">
+                        <textarea id="invisible_textarea"  disabled></textarea>
+                        <button class="botones" id="copy" name="copiar" onclick="copiar()">Copiar</button>
+                    </div>
                 </div>
-            </div>
+                
         </main>
     </div>
 </body>
